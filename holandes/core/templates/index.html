@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
-{% load static %}
+
 {% block content %}
-<body>
-<div class="cover">
+
+	<div class="cover">
 <div class="navbar">
 <div class="container">
 <div class="navbar-header"><button class="navbar-toggle" data-target="#navbar-ex-collapse" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span></button></div>
@@ -21,7 +21,7 @@
 <div class="row">
 <div class="col-md-12 text-center">
 <h1 class="text-inverse">Força Chape</h1>
-<img class="img-responsive img-thumbnail" src=".\chape.jpg" />
+<img class="img-responsive img-thumbnail" src=".\static\img\chape.jpg" />
 <p class="text-center text-inverse">Um novo cais foi dado para tantas vidas...<br> Como amantes do esporte e como admiradores da vida desejamos força...</p>
 <br />
 <br />
@@ -35,5 +35,5 @@
 </div>
 </div>
 </div>
-</body>
-</html>
+
+{% endblock content %}

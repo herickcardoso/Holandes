@@ -1,27 +1,26 @@
-{% load staticfiles %}
+{% load static %}
 <html>
 	<head>
 		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-		<link href="..static\favicon.ico" rel="icon" />
+		<link href="..\static\img\favicon.ico" rel="icon" />
 		<title>Holand&ecirc;s Voador</title>
 		<meta content="width=device-width, initial-scale=1" name="viewport" />
 		<!-- Jquery -->
 		<script type="text/javascript" src="../static/antigo/jquery.min.js"></script>
 	
 		<!-- Bootstrap -->
-		<script type="text/javascript" src="../static/antigo/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../static/antigo/bootstrap/dist/js/bootstrap.min.js"></script>
 			
 	    <!-- Font -->
-		<link href="..static/antigo/font-awesome.min.css" rel="stylesheet" type="text/css" />
+		<link href="../static/antigo/font-awesome.min.css" rel="stylesheet" type="text/css" />
 		<!-- CSS-->
-		<link href="..static/antigo/bootstrap.css" rel="stylesheet" type="text/css" />
+		<link href="../static/antigo/bootstrap.css" rel="stylesheet" type="text/css" />
 	</head>
+
+	<body>
+        {% block content %}
+        {% endblock content %}
 	</body>
-
-
-        {% block title %}
-        {% endblock title%}
-	
 <!-- Rodaṕé -->
 
 
@@ -30,8 +29,6 @@
     Esta saindo o novo Holandês<a href="http://holandesvoador.bid"> Holandês</a> <br>
     Desenvolvida em Django + Bootstrap Admin Template
     </div>
-    <i class="left-block fa fa-3x -upload fa-fw m-y-2 text-inverse fa-cloud"></i>
-    <div class="clearfix"></div>
-
-    </body>
+    <i class="left-block fa fa-1x -upload fa-fw m-y-2 text-inverse fa-futbol-o"></i>
+    <div class=""></div>
 </html>
