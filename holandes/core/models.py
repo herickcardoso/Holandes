@@ -11,7 +11,7 @@ class Jogador(models.Model):
     altura = models.DecimalField('Altura', max_digits=3, decimal_places=2)
     pernaEscolha = ((u'1', u'Direita'), (u'2', u'Esquerda'), (u'3', u'Ambas'))
     pernaboa = models.CharField(max_length=1, choices=pernaEscolha)
-    aniversario = models.DateTimeField()
+    aniversario = models.DateTimeField('Data de Nascimento',)
     gols = models.PositiveSmallIntegerField('Gols',)
     assistencias = models.PositiveSmallIntegerField('Assistências',)
     jogos = models.PositiveSmallIntegerField('Jogos',)
@@ -20,6 +20,26 @@ class Jogador(models.Model):
     jogolaranja = models.PositiveSmallIntegerField('Vitórias',)
     nota = models.DecimalField('Nota', max_digits=5, decimal_places=2)
     valor = models.DecimalField('Valor Pago', max_digits=5, decimal_places=2)
+
+
+class Atributos(models.Model):
+    velocidade = models.PositiveSmallIntegerField('Velocidade', max_digits=2)
+    aceleracao = models.PositiveSmallIntegerField('Aceleração', max_digits=2)
+    agilidade = models.PositiveSmallIntegerField('Velocidade', max_digits=2)
+    driVelocidade = models.PositiveSmallIntegerField('Velocidade', max_digits=2)
+    driTecnica = models.PositiveSmallIntegerField('Velocidade', max_digits=2)
+    desarme = models.PositiveSmallIntegerField('Velocidade', max_digits=2)
+    agilidade = models.PositiveSmallIntegerField('Velocidade', max_digits=2)
+    marcacao = models.PositiveSmallIntegerField('Velocidade', max_digits=2)
+    força = models.PositiveSmallIntegerField('Velocidade', max_digits=2)
+    trabEquip = models.PositiveSmallIntegerField('Velocidade', max_digits=2)
+    stamina = models.PositiveSmallIntegerField('Velocidade', max_digits=2)
+    chutLon = models.PositiveSmallIntegerField('Velocidade', max_digits=2)
+    chutFor = models.PositiveSmallIntegerField('Velocidade', max_digits=2)
+    finalizacao = models.PositiveSmallIntegerField('Velocidade', max_digits=2)
+    passcurto = models.PositiveSmallIntegerField('Velocidade', max_digits=2)
+    passlong = models.PositiveSmallIntegerField('Velocidade', max_digits=2)
+    visao = models.PositiveSmallIntegerField('Velocidade', max_digits=2)
 
 
 #    valor = models.DecimalField('Valor $', max_digits=5, decimal_places=2)
@@ -35,8 +55,8 @@ class Jogador(models.Model):
 #    telefone = models.CharField(max_length=20, blank=True)
 #    criado_em = models.DateTimeField('criado em', auto_now_add=True)
 
-class Jogos(models.Model):
 
+class Jogos(models.Model):
     criado_em = models.DateTimeField('criado em', auto_now_add=True)
     golstimepreto = models.PositiveSmallIntegerField('Gols Preto',)
     golstimelaranja = models.PositiveSmallIntegerField('Gols Laranja',)
